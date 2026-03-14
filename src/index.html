@@ -24,8 +24,20 @@
     </div>
 
     <div class="flex justify-end p-5">
-        <div class="border-2 bg-amber-100 md:w-150 md:h-120 w-full h-80 rounded-2xl">
-            test
+        <div class="relative border-2 bg-amber-100 md:w-150 md:h-140 w-full h-80 rounded-2xl overflow-hidden">
+            
+            <img src="../img/Club-De-Nuit-Intense-Man-Eau-De-Toilette-105ml.jpeg" 
+                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100" 
+                 alt="Beautiful landscape 1">
+                 
+            <img src="../img/armaf_club_de_nuit_precieux_i_55ml_edp_for_unisex3.jpg" 
+                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" 
+                 alt="Beautiful landscape 2">
+                 
+            <img src="../img/Untitled_design_64.webp" 
+                 class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" 
+                 alt="Beautiful landscape 3">
+                 
         </div>
     </div>
 
@@ -43,18 +55,80 @@
     </div>
     
     <h1 class="text-5xl font-mono font-thin pt-5 p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nisi rerum voluptates sed dolores ipsum blanditiis. Laboriosam veritatis delectus maxime eveniet. Quibusdam impedit, tempore molestias labore assumenda iste ab obcaecati!</h1> 
-    
-    <div class="flex md:flex-row flex-col pt-5 gap-6 p-5">
-        <h1></h1>
-        <div class="md:w-280 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
-        <div class="md:w-220 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
-    </div>
-
-    <div class="flex md:flex-row flex-col pt-5 gap-6 p-5">
-        <div class="md:w-220 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
-        <div class="md:w-280 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
-    </div>
+    <div class="flex flex-nowrap justify-between gap-4 relative">
+        <h3 class="p-5 uppercase text-2xl font-mono font-thin ">Latest Pickup</h3>
+        <a href="#" class="p-5 uppercase text-2xl font-mono font-thin "> → View Fragrances</a>
+    <div class="justify-center">
         
+    </div>
+    </div>
+    <div id="custom-cursor" class="fixed top-0 left-0 z-50 px-5 py-2 bg-gray-300/80 backdrop-blur-sm text-black rounded-full pointer-events-none opacity-0 transition-opacity duration-300 transform -translate-x-1/2 -translate-y-1/2 font-sans font-medium tracking-wide">
 </div>
+
+<div class="flex md:flex-row flex-col pt-5 gap-6 p-5">
+    <div class="hover-trigger cursor-none md:w-280 md:h-200 bg-amber-50 rounded-2xl w-full h-80" data-cursor-text="Armaf Instense Man EDT 105ml"></div>
+    
+    <div class="hover-trigger cursor-none md:w-220 md:h-200 bg-amber-50 rounded-2xl w-full h-80" data-cursor-text="Afnan Supremacy Collector Edition"></div>
+</div>
+
+<div class="flex md:flex-row flex-col pt-5 gap-6 p-5">
+    <div class="hover-trigger cursor-none md:w-220 md:h-200 bg-amber-50 rounded-2xl w-full h-80" data-cursor-text="Armaf Instense Man Preciux"></div>
+    
+    <div class="hover-trigger cursor-none md:w-280 md:h-200 bg-amber-50 rounded-2xl w-full h-80" data-cursor-text="Learn more"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentSlide = 0;
+
+            // 5000 milliseconds = 5 seconds
+            setInterval(() => {
+                // Fade out the current slide
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                
+                // Calculate the next slide (loops back to 0 when it hits the end)
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                // Fade in the new slide
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }, 5000); 
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+        const customCursor = document.getElementById('custom-cursor');
+        const hoverTriggers = document.querySelectorAll('.hover-trigger');
+
+        // 1. Make the custom div follow the mouse everywhere
+        document.addEventListener('mousemove', (e) => {
+            // e.clientX and e.clientY get the exact pixel coordinates of the mouse
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+        });
+
+        // 2. Add event listeners to each area where we want the effect
+        hoverTriggers.forEach(trigger => {
+            
+            // When the mouse ENTERS the area
+            trigger.addEventListener('mouseenter', () => {
+                // Get the text we want to display from the data attribute
+                const text = trigger.getAttribute('data-cursor-text');
+                customCursor.textContent = text;
+                
+                // Fade it in by swapping Tailwind opacity classes
+                customCursor.classList.remove('opacity-0');
+                customCursor.classList.add('opacity-100');
+            });
+
+            // When the mouse LEAVES the area
+            trigger.addEventListener('mouseleave', () => {
+                // Fade it out
+                customCursor.classList.remove('opacity-100');
+                customCursor.classList.add('opacity-0');
+            });
+        });
+    });
+</script>
 </body>
 </html>
