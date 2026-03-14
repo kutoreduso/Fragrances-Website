@@ -6,66 +6,53 @@
   <link href="../dist/output.css" rel="stylesheet">
   <title>Website</title>
 </head>
-<body>
+<body class="overflow-x-hidden">
     <div class="p-5 relative">
-    <!-- Navigation bar -->
-     
-        <div class="flex p-5 md:flex-nowrap justify-between md:w-full space-x-2 relative ">
-            <h1 class="md:justify-center font-medium font-mono ">Title</h1>
-                <div clas="md:justify-end">
-                    <a href="" class="border-2 rounded-2xl">Button1</a>
-                    <a href="" class="border-2 rounded-2xl">Button1</a>
-                    <a href="" class="border-2 rounded-2xl">Button1</a>
+    <div class="flex p-5 md:flex-nowrap flex-wrap justify-between md:w-full gap-4 relative">
+            <h1 class="md:justify-center font-medium font-mono">Title</h1>
+            <div class="md:justify-end flex flex-wrap gap-2">
+                <a href="" class="border-2 rounded-2xl px-2">Button1</a>
+                <a href="" class="border-2 rounded-2xl px-2">Button1</a>
+                <a href="" class="border-2 rounded-2xl px-2">Button1</a>
             </div>
         </div>
    
-    <!-- Hero Content -->
-    <div class="flex flex-nowrap pt-20 p-5 md:flex-col flex-col">
+    <div class="flex pt-20 p-5 md:flex-col flex-col">
         <h1 class="text-7xl font-mono font-medium">lorem</h1>
         <h1 class="text-7xl font-mono font-medium">impsum</h1>
         <p class="text-3xl font-mono font-thin md:w-150">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad veniam earum, ex inventore repellat.</p> 
     </div>
-    <!-- Imgs -->
-    <div class="flex flex-nowrap justify-end p-5">
-        <div class="border-2 bg-amber-100 md:w-150 md:h-120 w-150 h-80">
+
+    <div class="flex justify-end p-5">
+        <div class="border-2 bg-amber-100 md:w-150 md:h-120 w-full h-80 rounded-2xl">
             test
         </div>
     </div>
-    <div class="justify-start pt-15">
+
+    <div class="justify-start pt-15 p-5">
         <h1 class="text-7xl font-mono font-medium">
             let's explore!
         </h1>
         <p class="text-3xl font-mono font-thin md:w-300">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, molestiae qui dolorum vitae veritatis ullam laudantium tempore quod consequuntur ipsum!</p>
     </div>
 
-    <div class="flex md:flex-nowrap pt-10">
-        <div class="w-full h-150 bg-[#d9d9d9]">
-            <img src="">
-            
+    <div class="flex md:flex-nowrap pt-10 p-5">
+        <div class="w-full h-150 bg-[#d9d9d9] rounded-2xl">
+            <img src="" alt="">
         </div>
-       
     </div>
-     <h1 class="text-5xl font-mono font-thin pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nisi rerum voluptates sed dolores ipsum blanditiis. Laboriosam veritatis delectus maxime eveniet. Quibusdam impedit, tempore molestias labore assumenda iste ab obcaecati!</h1> 
     
-    <div class="flex flex-nowrap md:flex-row flex-col pt-5 space-x-6">
-        <h1 class="">
-
-        </h1>
-
-            <div class="md:w-280 md:h-200 bg-amber-50">
-
-        </div>
-        <div class="md:w-220 md:h-200 bg-amber-50">
-        </div>
+    <h1 class="text-5xl font-mono font-thin pt-5 p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nisi rerum voluptates sed dolores ipsum blanditiis. Laboriosam veritatis delectus maxime eveniet. Quibusdam impedit, tempore molestias labore assumenda iste ab obcaecati!</h1> 
+    
+    <div class="flex md:flex-row flex-col pt-5 gap-6 p-5">
+        <h1></h1>
+        <div class="md:w-280 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
+        <div class="md:w-220 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
     </div>
-        <div class="flex flex-nowrap md:flex-row flex-col pt-5 space-x-6">
-            
-        <div class="md:w-220 md:h-200 bg-amber-50">
 
-        </div>
-        <div class="md:w-280 md:h-200 bg-amber-50">
-
-        </div>
+    <div class="flex md:flex-row flex-col pt-5 gap-6 p-5">
+        <div class="md:w-220 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
+        <div class="md:w-280 md:h-200 bg-amber-50 rounded-2xl w-full h-80"></div>
     </div>
         
 </div>
