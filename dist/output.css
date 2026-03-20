@@ -364,6 +364,12 @@
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .text-justify {
+    text-align: justify;
+  }
   .font-mono {
     font-family: var(--font-mono);
   }
@@ -478,6 +484,11 @@
   .md\:w-160 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 160);
+    }
+  }
+  .md\:w-200 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 200);
     }
   }
   .md\:w-220 {
